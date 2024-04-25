@@ -11,7 +11,7 @@
         <h2 class="h2">{data.albums[0].title}</h2>
 
 
-<section class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<section class="grid grid-cols-2 md:grid-cols-3 gap-2">
     {#each data.photos as photo}
 	<div>
 		<img class="h-auto max-w-full rounded-lg" src="https://photos.oyvindmal.no/medium/{data.albums[0].folderName}/{photo.fileName}" alt="{photo.fileName}">
