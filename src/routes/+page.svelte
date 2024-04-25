@@ -6,13 +6,17 @@
 
 	<div class="space-y-5">
 	
-		<ul>
+		
 			{#each data.albums as album}
-			<li><a href="/album/{album.id}">{album.title}</a></li>
+			<h2 class="h2"><a href="/album/{album.id}">{album.title}</a></h2>
+			{#if album && album.Photos && album.Photos.fileName}
+  <img src="https://photos.oyvindmal.no/medium/{album.folderName}/{album.Photos.fileName}" alt="{album.Photos.fileName}" srcset="">
+{:else}
+  <p>No image available</p>
+{/if}
 		  {/each}
-		</ul>
+
 	</div>
 </div>
-
 
 
