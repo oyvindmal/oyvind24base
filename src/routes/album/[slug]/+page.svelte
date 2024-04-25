@@ -12,7 +12,7 @@
 
 
 <section class="grid grid-cols-2 md:grid-cols-3 gap-2">
-    {#each data.photos as photo}
+    {#each data.albums[0].Photos as photo}
 	<div>
 		<img loading="lazy" class="h-auto max-w-full rounded-lg" src="https://photos.oyvindmal.no/medium/{data.albums[0].folderName}/{photo.fileName}" alt="{photo.fileName}">
 	</div>
