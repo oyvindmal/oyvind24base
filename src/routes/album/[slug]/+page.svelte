@@ -7,6 +7,11 @@
     <div class="card">
         <header class="card-header"><h2 class="h2">{data.albums[0].title}</h2></header>
         <section class="p-4">
+            {#each data.albums[0].Metadata as metadata}
+					<span class="chip variant-filled">{metadata.value}</span>
+					{/each}
+        </section>
+        <section class="p-4">
             <div class="grid grid-cols-6 gap-4">
                 {#each data.albums[0].Photos as photo}
             <div>
