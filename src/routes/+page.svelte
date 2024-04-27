@@ -12,6 +12,10 @@
 				  {:else}
 					<p>No image available</p>
 				  {/if}
+				 
+				</section>
+				<section class="p-4">
+					<span class="chip variant-filled">{album.Photos}</span>
 				</section>
 		
 		
