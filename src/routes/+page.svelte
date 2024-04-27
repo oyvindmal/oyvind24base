@@ -15,7 +15,11 @@
 				 
 				</section>
 				<section class="p-4">
-					<span class="chip variant-filled">{album.AlbumPhotos.length}</span>
+					<span class="chip variant-filled">{album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}</span>
+					{#each album.Metadata as metadata}
+					<span class="chip variant-filled">{metadata.value}</span>
+					
+					{/each}
 				</section>
 		
 		
