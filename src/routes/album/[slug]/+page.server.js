@@ -5,7 +5,7 @@ export async function load({params}) {
 
   const { data: albumData } = await supabase
   .from("Albums")
-  .select('*, Photos!albumId(*)')
+  .select('*, Photos!album_id(*)')
   .eq('id', params.slug);
 
   return {
