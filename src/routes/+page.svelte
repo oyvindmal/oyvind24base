@@ -14,7 +14,7 @@
 				  {/if}
 				 
 				</section>
-				<footer class="card-footer">
+				<footer class="card-footer flex flex-row gap-2">
 					<span class="badge variant-filled">{album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}</span>
 					
 					{#each album.Metadata as metadata}
