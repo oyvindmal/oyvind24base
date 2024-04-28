@@ -15,10 +15,10 @@
 				 
 				</section>
 				<footer class="card-footer">
-					<span class="chip variant-filled">{album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}</span>
+					<span class="badge variant-filled">{album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}</span>
 					
 					{#each album.Metadata as metadata}
-					<span class="chip variant-filled">{metadata.value}</span>
+					<span class="badge variant-filled">{metadata.value}</span>
 					{/each}
 				</footer>
 		

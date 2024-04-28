@@ -5,11 +5,11 @@
 </script>
 <div class="container">
     <div class="card">
-        <header class="card-header"><h2 class="h2">{data.albums[0].title}</h2></header>
-        <section class="p-4">
+        <header class="card-header p-5"><h2 class="h2">{data.albums[0].title}</h2></header>
+        <section class="p-5">
             {#each data.albums[0].Metadata as metadata}
-					<span class="chip variant-filled">{metadata.value}</span>
-					{/each}
+            <span class="badge variant-filled">{metadata.value}</span>
+            {/each}
         </section>
         <section class="p-4">
             <div class="grid grid-cols-6 gap-4">
@@ -22,4 +22,5 @@
         </section>
     </div>
 </div>
+
 
