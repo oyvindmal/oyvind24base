@@ -10,6 +10,9 @@
             {#each data.albums[0].Metadata as metadata}
             <span class="badge variant-filled">{metadata.value}</span>
             {/each}
+
+            <span class="badge variant-filled">{data.albums[0].Metadata[0].value}</span>
+            <span class="badge variant-filled">{data.albums[0].Metadata[1].value}</span>
         </section>
         <section class="p-4">
             <div class="grid grid-cols-6 gap-4">
