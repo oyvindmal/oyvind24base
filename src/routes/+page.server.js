@@ -11,7 +11,7 @@ export async function load() {
       AlbumPhotos:Photos!Photos_album_id_fkey(fileName),
       FeaturedPhoto:Photos!featuredPhotoId(fileName)
    
-    `)
+    `).eq('published', true)
     .order('albumDate', { ascending: false });
     if (error) console.log('Supabase error:', error);
 
