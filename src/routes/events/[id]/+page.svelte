@@ -4,14 +4,22 @@
     console.log(data)
 </script>
 
-<h1 class="h1">{data.event[0].name}</h1>
 
 
 
 <div class="grid grid-cols-1 gap-4">
+    <div class="card p-5">
+        <header class="card-header">
+            <h1 class="h2">{data.event[0].name}</h1>
+            
+        </header>
+        <section class="p-4"><p>{data.event[0].description}</p></section>
+
+
+    </div>
     {#each data.albums as album}
 <div class="card p-5">
-    <header class="card-header"><h2 class="h2"><a href="/album/{album.id}">{album.title}</a></h2></header>
+    <header class="card-header"><h2 class="h3"><a href="/album/{album.id}">{album.title}</a></h2></header>
     <section class="p-4">
         {#if album && album.FeaturedPhoto && album.FeaturedPhoto.fileName}
         <img loading="lazy" src="https://photos.oyvindmal.no/medium/{album.folderName}/{album.FeaturedPhoto.fileName}" alt="{album.FeaturedPhoto.fileName}" srcset="">
