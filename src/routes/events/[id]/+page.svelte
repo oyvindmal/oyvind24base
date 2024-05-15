@@ -20,17 +20,22 @@
     {#each data.combined as album}
 <div class="card p-5">
     <header class="card-header"><h2 class="h3"><a href="/album/{album.id}">{album.title}</a></h2></header>
+    {#if album && album.FeaturedPhoto && album.FeaturedPhoto.fileName}
     <section class="p-4">
-        {#if album && album.FeaturedPhoto && album.FeaturedPhoto.fileName}
+        
         <img loading="lazy" src="https://photos.oyvindmal.no/medium/{album.folderName}/{album.FeaturedPhoto.fileName}" alt="{album.FeaturedPhoto.fileName}" srcset="">
-      {:else}
-        <p>No image available</p>
-      {/if}
+    
+        
+     
      
     </section>
+    {/if}
+    {#if album && album.summary}
     <section class="p-4">
         {album.summary}
     </section>
+  {/if}
+  
     <footer class="card-footer flex flex-row gap-2">
         {#if album && album.AlbumPhotos}
         <span class="badge variant-filled">
