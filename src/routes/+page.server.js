@@ -12,7 +12,7 @@ export async function load() {
       FeaturedPhoto:Photos!featuredPhotoId(fileName)
    
     `).eq('published', true)
-    .order('albumDate', { ascending: false });
+    .order('date', { ascending: false });
     if (error) console.log('Supabase error:', error);
 
   return {

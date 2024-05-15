@@ -20,7 +20,7 @@ export async function load({params}) {
    
     `).eq('published', true)
     .eq('eventId', params.id)
-    .order('albumDate', { ascending: false });
+    .order('date', { ascending: false });
 
   return {
     event: eventData ?? [],
