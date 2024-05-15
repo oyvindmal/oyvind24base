@@ -17,7 +17,7 @@
 
 
     </div>
-    {#each data.albums as album}
+    {#each data.combined as album}
 <div class="card p-5">
     <header class="card-header"><h2 class="h3"><a href="/album/{album.id}">{album.title}</a></h2></header>
     <section class="p-4">
@@ -28,12 +28,23 @@
       {/if}
      
     </section>
+    <section class="p-4">
+        {album.summary}
+    </section>
     <footer class="card-footer flex flex-row gap-2">
-        <span class="badge variant-filled">{album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}</span>
-        
+        {#if album && album.AlbumPhotos}
+        <span class="badge variant-filled">
+          {album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}
+        </span>
+      {/if}
+      
+      {#if album && album.Metadata}
         {#each album.Metadata as metadata}
-        <span class="badge variant-filled">{metadata.value}</span>
+          {#if metadata && metadata.value}
+            <span class="badge variant-filled">{metadata.value}</span>
+          {/if}
         {/each}
+      {/if}
     </footer>
 
 
