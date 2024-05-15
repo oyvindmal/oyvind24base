@@ -17,34 +17,34 @@
 
 
     </div>
-    {#each data.combined as album}
+    {#each data.combined as content}
 <div class="card p-5">
-    <header class="card-header"><h2 class="h3"><a href="/album/{album.id}">{album.title}</a></h2></header>
-    {#if album && album.FeaturedPhoto && album.FeaturedPhoto.fileName}
+    <header class="card-header"><h2 class="h3"><a href="/album/{content.id}">{content.title}</a></h2></header>
+    {#if content && content.FeaturedPhoto && content.FeaturedPhoto.fileName}
     <section class="p-4">
         
-        <img loading="lazy" src="https://photos.oyvindmal.no/medium/{album.folderName}/{album.FeaturedPhoto.fileName}" alt="{album.FeaturedPhoto.fileName}" srcset="">
+        <img loading="lazy" src="https://photos.oyvindmal.no/medium/{content.folderName}/{content.FeaturedPhoto.fileName}" alt="{content.FeaturedPhoto.fileName}" srcset="">
     
         
      
      
     </section>
     {/if}
-    {#if album && album.summary}
+    {#if content && content.summary}
     <section class="p-4">
-        {album.summary}
+        {content.summary}
     </section>
   {/if}
   
     <footer class="card-footer flex flex-row gap-2">
-        {#if album && album.AlbumPhotos}
+        {#if content && content.AlbumPhotos}
         <span class="badge variant-filled">
-          {album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}
+          {content.AlbumPhotos.length} {content.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}
         </span>
       {/if}
       
-      {#if album && album.Metadata}
-        {#each album.Metadata as metadata}
+      {#if content && content.Metadata}
+        {#each content.Metadata as metadata}
           {#if metadata && metadata.value}
             <span class="badge variant-filled">{metadata.value}</span>
           {/if}
