@@ -11,7 +11,7 @@
 </AppBar>
 <div class="container mx-auto">
 
-	<div class="grid grid-cols-1 gap-4">
+	<div class="grid grid-cols-1 p-4 gap-4">
 		<slot />
 	</div>
 	
