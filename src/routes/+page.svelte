@@ -1,6 +1,7 @@
 <script>
 	export let data;
 	console.log(data);
+	import SocialIcons from '@rodneylab/svelte-social-icons';
   </script>
 
 
@@ -12,6 +13,11 @@
 	</section>
 	<section class="p-4">
 		<p class="text-neutral-50 p-4"> Mitt navn er Øyvind, jeg tar bilder av ting.</p>
+	</section>
+	<section class="p-4">
+		<SocialIcons alt="" network="instagram" fgColor="#eeeeee" bgColor="#111111" />
+		<SocialIcons alt="" network="tiktok" fgColor="#eeeeee" bgColor="#111111" />
+		<SocialIcons alt="" network="youtube" fgColor="#eeeeee" bgColor="#111111" />
 	</section>
 </div>
 <div class="grid grid-cols-2 gap-4">
