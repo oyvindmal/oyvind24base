@@ -35,6 +35,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@rodneylab/svelte-social-icons": "^0.0.30",
     "@supabase/supabase-js": "^2.42.7",
     "svelte-markdown": "^0.4.1"
   }
