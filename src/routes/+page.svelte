@@ -32,11 +32,11 @@
 	
 		<h2 class="h1 text-neutral-50 bg-slate-500 p-4 rounded-2xl  opacity-90"><a href="/album">Alle album &rsaquo;</a></h2>
 	</div>
-	<div  style="height:40vh;" class="card bg-center bg-cover p-4 text-center content-center bg-[url('https://photos.oyvindmal.no/medium/190524orn/IMG_0455.JPG')]">
+	<div  style="height:40vh; display:none;" class="card bg-center bg-cover p-4 text-center content-center bg-[url('https://photos.oyvindmal.no/medium/190524orn/IMG_0455.JPG')]">
 	
 		<h2 class="h1 text-neutral-50 bg-slate-500 p-4 rounded-2xl  opacity-90"><a href="/album">Alle album &rsaquo;</a></h2>
 	</div>
-	<div  style="height:40vh;" class="card bg-center bg-cover p-4 text-center content-center bg-[url('https://photos.oyvindmal.no/medium/190524orn/IMG_0455.JPG')]">
+	<div  style="height:40vh;  display:none;" class="card bg-center bg-cover p-4 text-center content-center bg-[url('https://photos.oyvindmal.no/medium/190524orn/IMG_0455.JPG')]">
 	
 		<h2 class="h1 text-neutral-50 bg-slate-500 p-4 rounded-2xl  opacity-90"><a href="/album">Alle album &rsaquo;</a></h2>
 	</div>
