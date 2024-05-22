@@ -7,7 +7,7 @@
 	
 
     {#each data.albums[0].Photos as photo}
-    <div class="snap-start shrink-0 card py-20 w-40 md:w-80 text-center">
+    <div class="snap-start shrink-0 card py-20 text-center">
     <img
         class=""
         style="height:70vh"
