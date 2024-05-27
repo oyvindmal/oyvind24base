@@ -4,7 +4,7 @@ import { supabase } from "$lib/supabaseClient";
 export async function load({params}) {
 
   const { data: eventData } = await supabase
-  .from("Events")
+  .from("Collections")
   .select('*')
   .eq('id', params.id);
 

@@ -5,7 +5,7 @@ export async function load({params}) {
   const { data: eventData } = await supabase
   .from("Collections")
   .select('*')
-  .eq('type', 'event')
+  .neq('type', 'event')
   .order('endDate', { ascending: false });
 
   return {
