@@ -23,7 +23,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 	<div style="height:40vh;" class="card bg-center bg-cover p-4 text-center content-center align-middle bg-[url('https://photos.oyvindmal.no/medium/valo24-honningbarna/honningbarna-7.jpg')]">
 
-		<h2 class="h1 text-neutral-50 bg-slate-500 p-4 rounded-2xl  opacity-90"><a href="/events">Konserter og events &rsaquo;</a></h2>
+		<h2 class="h1 text-neutral-50 bg-slate-500 p-4 rounded-2xl  opacity-90"><a href="/collections/type/event">Konserter og events &rsaquo;</a></h2>
 	</div>
 	
 	
