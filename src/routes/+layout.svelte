@@ -9,10 +9,6 @@
 	<h1 class="h2"><a href="/">Øyvind Malin</a></h1>
 	<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 </AppBar>
-<div class="container mx-auto">
 
-	<div class="grid grid-cols-1 p-4 gap-4">
-		<slot />
-	</div>
-	
-</div>
+<slot />
+
