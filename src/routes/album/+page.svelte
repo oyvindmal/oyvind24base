@@ -3,9 +3,9 @@
 	console.log(data);
   </script>
 
-<div class="columns-1 md:columns-3 lg:columns-4">
+<div class="p-4 columns-1 md:columns-3 lg:columns-4">
 				{#each data.albums as album}
-			<div class="p-4 break-inside-avoid-column" style="di">
+			<div class="p-4 break-inside-avoid-column card">
 				<header class="p-4"><h2 class="h2"><a href="/album/{album.id}">{album.title}</a></h2></header>
 				<section class="p-4">
 					{#if album && album.FeaturedPhoto && album.FeaturedPhoto.fileName}
