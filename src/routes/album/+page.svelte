@@ -3,9 +3,9 @@
 	console.log(data);
   </script>
 
-<div class="grid grid-cols-1 gap-4">
+<div class="columns-1 md:columns-3 lg:columns-4">
 				{#each data.albums as album}
-			<div class="p-5 min-h-screen w-full bg-surface-700">
+			<div class="p-4 break-inside-avoid-column" style="di">
 				<header class="p-4"><h2 class="h2"><a href="/album/{album.id}">{album.title}</a></h2></header>
 				<section class="p-4">
 					{#if album && album.FeaturedPhoto && album.FeaturedPhoto.fileName}
@@ -15,7 +15,7 @@
 				  {/if}
 				 
 				</section>
-				<footer class="flex flex-row gap-2">
+				<footer>
 					<span class="badge variant-filled">{album.AlbumPhotos.length} {album.AlbumPhotos.length === 1 ? 'bilde' : 'bilder'}</span>
 					
 					{#each album.Metadata as metadata}
