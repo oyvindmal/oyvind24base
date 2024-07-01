@@ -6,7 +6,7 @@
 
 
 
-<div class="p-4">
+<!-- div class="p-4">
  
 <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
   <li class="mb-10 ms-6">            
@@ -42,7 +42,7 @@
 </ol>
 
 
-</div>
+</div -->
 
 
 <div class="grid grid-cols-1 gap-4">
@@ -67,6 +67,16 @@
      
      
     </section>
+
+   
+  {:else}
+  {#if content.AlbumPhotos.length != 0}
+  <img loading="lazy" src="https://photos.oyvindmal.no/medium/{content.folderName}/{content.AlbumPhotos[0].fileName}" alt="{content.AlbumPhotos[0].fileName}" srcset="">
+ 
+  {:else}
+    <p>Tomt album</p>
+    {/if}
+
     {/if}
     {#if content && content.summary}
     <section class="p-4">

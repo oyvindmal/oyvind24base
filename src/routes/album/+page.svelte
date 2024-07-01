@@ -11,7 +11,12 @@
 					{#if album && album.FeaturedPhoto && album.FeaturedPhoto.fileName}
 					<img loading="lazy" src="https://photos.oyvindmal.no/medium/{album.folderName}/{album.FeaturedPhoto.fileName}" alt="{album.FeaturedPhoto.fileName}" srcset="">
 				  {:else}
-					<p>No image available</p>
+				  {#if album && album.AlbumPhotos.length != 0}
+				  <img loading="lazy" src="https://photos.oyvindmal.no/medium/{album.folderName}/{album.AlbumPhotos[0].fileName}" alt="{album.AlbumPhotos[0].fileName}" srcset="">
+				 
+				  {:else}
+					<p>Tomt album</p>
+					{/if}
 				  {/if}
 				 
 				</section>
