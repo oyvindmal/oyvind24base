@@ -1,6 +1,16 @@
 <script>
 	export let data;
 	console.log(data);
+	function formatToSimpleDate(dateString) {
+    const date = new Date(dateString);
+    const pad = (num) => num.toString().padStart(2, '0');
+
+    const day = pad(date.getUTCDate());
+    const month = pad(date.getUTCMonth() + 1);
+    const year = date.getUTCFullYear();
+
+    return `${day}.${month}.${year}`;
+}
   </script>
 <div  class="min-h-screen w-full bg-surface-700">
 	<div class=" p-4 text-center content-center align-middle">
@@ -36,7 +46,7 @@
 				</div>
 				<div>
 					<h1 class="h1"><a href="/albums/{collection.id}">{collection.title}</a></h1>
-					<p>{collection.date}</p>
+					<p>{formatToSimpleDate(collection.date)}</p>
 					{#if collection && collection.summary} 
 
                     {collection.summary}

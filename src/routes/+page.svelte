@@ -1,6 +1,19 @@
 <script>
 	export let data;
 	console.log("front",data);
+
+	function formatDate(dateString) {
+    const [year, month, day] = dateString.split('-');
+    return `${day}.${month}.${year}`;
+}
+
+function formatDates(startDate, endDate) {
+    if (startDate === endDate) {
+        return formatDate(startDate);
+    } else {
+        return `${formatDate(startDate)} - ${formatDate(endDate)}`;
+    }
+}
   </script>
 
 <div  class="min-h-screen w-full bg-surface-700">
@@ -33,6 +46,7 @@
 				</div>
 				<div>
 					<h1 class="h1"><a href="/collections/show/{collection.id}">{collection.name}</a></h1>
+					<p>{formatDates(collection.startDate, collection.endDate)}</p>
 					{collection.description}
 				</div>
 				
