@@ -37,7 +37,7 @@
 		
 				</div>
 				<div>
-					<h1 class="h1"><a href="/album/{collection.id}">{collection.title}</a></h1>
+					<h1 class="h1"><a href="/albums/{collection.id}">{collection.title}</a></h1>
 					{#if collection && collection.summary} 
 
                     {collection.summary}
