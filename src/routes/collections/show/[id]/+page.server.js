@@ -22,23 +22,10 @@ export async function load({params}) {
     .eq('eventId', params.id)
     .order('date', { ascending: false });
 
-
-    const { data: postsData, postsError } = await supabase
-    .from('Posts')
-    .select(`
-      *
-    `).eq('published', true)
-    .eq('eventId', params.id)
-    .order('date', { ascending: false });
-
-    let combined = albumData?.concat(postsData);
-
-    combined.sort((a, b) => new Date(b.date) - new Date(a.date));
   return {
     event: eventData ?? [],
     albums: albumData ?? [],
-    posts: postsData ?? [],
-    combined: combined ?? [],
+ 
 
   };
 }

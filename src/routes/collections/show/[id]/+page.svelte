@@ -55,7 +55,7 @@
 
 
     </div>
-    {#each data.combined as content}
+    {#each data.albums as content}
 <div class="card p-5">
     <header class="card-header"><h2 class="h3"><a href="/album/{content.id}">{content.title}</a></h2></header>
     {#if content && content.FeaturedPhoto && content.FeaturedPhoto.fileName}
